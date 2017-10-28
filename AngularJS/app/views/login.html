@@ -1,0 +1,8 @@
+<form name="form" role="loginForm">
+                
+  <input name="username" ng-model="usuario.username" placeholder="Nombre de Usuario" required="" class="form-control form-white input-lg" type="text">
+  <input name="password" ng-model="usuario.password" class="form-control form-white input-lg" id="password" placeholder="Contraseña" required="" type="password">
+ 
+  <button disabled="disabled" ng-click="ingresar()" ng-disabled="form.$invalid" name="btnLogin" class="btn btn-lg btn-warning btn-block">Ingresar</button>
+    
+</form> 
