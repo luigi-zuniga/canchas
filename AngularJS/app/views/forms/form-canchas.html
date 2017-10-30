@@ -1,0 +1,67 @@
+<div class="modal-header">
+  <button type="button" class="close" ng-click="$dismiss()"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+  <h3 class="modal-title">{{ tituloFormulario }}</h3>
+</div>
+<div class="modal-body">
+  <form class="simple-form" id="canchaForm" name="canchaForm">
+    <div class="panel panel-default">
+      <div class="panel-heading">{{ encabezado }}</div>
+
+      <div class="panel-body" style="margin-bottom: 40px;">
+
+        <div class="col-sm-12" style="margin-top: 20px;">
+          <div class="form-group form-group-md required">
+            <label class="col-sm-4 control-label">Nombre:</label>
+            <div class="col-sm-6">
+              <input ng-model="cancha.nombre" class="form-control form-white" type="text" placeholder="ingrese el nombre" required >
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-12" style="margin-top: 20px;">
+          <div class="form-group form-group-md required">          
+            <label class="col-sm-4 control-label">Tipo:</label>
+            <div class="col-sm-6">
+              <select class="form-control form-white" ng-model="cancha.tipo" ng-options="tipo as tipo.nombre for tipo in tipos" required> 
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-12" style="margin-top: 20px;">
+          <div class="form-group form-group-md required">
+            <label class="col-sm-4 control-label">Capacidad:</label>
+            <div class="col-sm-6">
+              <input ng-model="cancha.capacidad" class="form-control form-white" type="text" placeholder="ingrese la capacidad" required >
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-12" style="margin-top: 20px;">
+          <div class="form-group form-group-md required">
+            <label class="col-sm-4 control-label">Largo:</label>
+            <div class="col-sm-6">
+              <input ng-model="cancha.largo" class="form-control form-white" type="text" placeholder="ingrese el largo en metros" required >
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-12" style="margin-top: 20px;">
+          <div class="form-group form-group-md required">
+            <label class="col-sm-4 control-label">Ancho:</label>
+            <div class="col-sm-6">
+              <input ng-model="cancha.ancho" class="form-control form-white" type="text" placeholder="ingrese el ancho en metros" required >
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </form>
+</div>
+
+<div class="modal-footer">
+  <button class="btn btn-primary" type="button" ng-click="guardar(cancha)" ng-disabled="canchaForm.$invalid">Guardar</button>
+  <button class="btn btn-warning" type="button" ng-click="$dismiss()">Cancelar</button>
+</div>

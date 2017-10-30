@@ -13,6 +13,7 @@ angular
     'ngAnimate',
     'ngCookies',
     'ngResource',
+    'ui.bootstrap',
     'ngRoute',
     'ngSanitize',
     'ngTouch'
@@ -35,6 +36,11 @@ angular
         templateUrl: 'views/login.html',
         controller: 'LoginCtrl',
         controllerAs: 'login'
+      })
+      .when('/canchas', {
+        templateUrl: 'views/canchas.html',
+        controller: 'CanchasCtrl',
+        controllerAs: 'canchas'
       })
       .otherwise({
         redirectTo: '/'
